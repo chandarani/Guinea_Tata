@@ -1,0 +1,203 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminTATA.master.cs" Inherits="admin_AdminTATA" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>GUINEA Admin</title>
+    <link href="../Style/AdminStyle.css" rel="Stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 125%;
+        }
+        .style2
+        {
+            width: 1764px;
+        }
+        .style3
+        {
+            width: 1244px;
+        }
+    </style>
+    <style>
+nav {    
+    display: block;
+    text-align: center;
+  }
+  nav ul {
+    margin: 0;
+    padding:0;
+    list-style: none;
+  }
+  .nav a {
+    display:block; 
+    background: #111; 
+    color:#fff; 
+    text-decoration: none;
+    padding: .8em 1.8em;
+    text-transform: uppercase;
+    font-size: 80%;letter-spacing: 2px;
+    text-shadow: 0 -1px 0 #000;
+    position: relative;
+  }
+  .nav{  
+    vertical-align: top; 
+    display: inline-block;
+    box-shadow: 1px -1px -1px 1px #000, -1px 1px -1px 1px #fff, 0 0 6px 3px #fff;
+    border-radius:6px;
+  }
+  .nav li{position: relative;}
+  .nav > li { 
+    float:left; 
+    border-bottom: 4px #aaa solid; 
+    margin-right: 1px; 
+  } 
+  .nav > li > a { 
+    margin-bottom:1px;
+    box-shadow:inset 0 2em .33em -.5em #555; 
+  }
+  .nav > li:hover , .nav > li:hover >a{  border-bottom-color:orange;}
+  .nav li:hover > a { color:orange; }
+  .nav > li:first-child  { border-radius: 4px 0 0 4px;} 
+  .nav > li:first-child>a{border-radius: 4px 0 0 0;}
+  .nav > li:last-child  { 
+    border-radius: 0 0 4px 0; 
+    margin-right: 0;
+  } 
+  .nav > li:last-child >a{border-radius: 0 4px 0 0; }
+  .nav li li a { margin-top:1px}
+  
+  
+  
+    .nav li a:first-child:nth-last-child(2):before { 
+     content:""; 
+     position: absolute; 
+     height:0; 
+     width: 0; 
+     border: 5px solid transparent; 
+     top: 50% ;
+     right:5px;  
+   }
+   
+   
+   
+   
+   
+   /* submenu positioning*/
+.nav ul {
+  position: absolute;
+  white-space: nowrap;
+  border-bottom: 5px solid  orange;
+  z-index: 1;
+  left: -99999em;
+}
+.nav > li:hover > ul {
+  left: auto;
+  padding-top: 5px  ;
+  min-width: 100%;
+}
+.nav > li li ul {  border-left:1px solid #fff;}
+
+
+.nav > li li:hover > ul { 
+ /* margin-left: 1px */
+  left: 100%;
+  top: -1px;
+}
+/* arrow hover styling */
+.nav > li > a:first-child:nth-last-child(2):before { 
+  border-top-color: #aaa; 
+}
+.nav > li:hover > a:first-child:nth-last-child(2):before {
+  border: 5px solid transparent; 
+  border-bottom-color: orange; 
+  margin-top:-5px
+}
+.nav li li > a:first-child:nth-last-child(2):before {  
+  border-left-color: #aaa; 
+  margin-top: -5px
+}
+.nav li li:hover > a:first-child:nth-last-child(2):before {
+  border: 5px solid transparent; 
+  border-right-color: orange;
+  right: 10px; 
+}
+
+</style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+         <table align="center" class="style1"  >
+        
+        <tr><td colspan="6" class="style3"> &nbsp;<asp:Image ID="Image3" runat="server" 
+                Height="154px" ImageUrl="~/Images/images (2)2.png" Width="153px" />
+&nbsp;<asp:Image ID="Image1" runat="server" ImageUrl="~/Images/download (16).jpg" 
+                Width="882px" Height="153px" />&nbsp;<asp:Image ID="Image2" runat="server" Height="152px" 
+                ImageUrl="~/Images/download (6)1.jpg" Width="217px" />
+            &nbsp;</td></tr>
+            </table>
+            
+
+            <table>
+        <tr><td class="style2" bgcolor="White">
+            <asp:ImageButton ID="ImageButton7" runat="server" Height="140px" 
+                ImageUrl="~/Images/home-icon.png" onclick="ImageButton7_Click" 
+                Width="129px" />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <asp:ImageButton ID="ImageButton1" runat="server" 
+                ImageUrl="~/Images/images (4)2.jpg" Height="83px" Width="164px" 
+                onclick="ImageButton1_Click1" />  
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+            <asp:ImageButton ID="ImageButton2" runat="server" Height="99px" 
+                ImageUrl="~/Images/images (5).jpg" Width="164px" 
+                onclick="ImageButton2_Click" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+            <asp:ImageButton ID="ImageButton3" runat="server" Height="112px" 
+                ImageUrl="~/Images/images (26).jpg" Width="112px" 
+                onclick="ImageButton3_Click" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:ImageButton ID="ImageButton4" runat="server" Height="131px" 
+                ImageUrl="~/Images/images (24)2.jpg" Width="119px" 
+                onclick="ImageButton4_Click" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+            <asp:ImageButton ID="ImageButton5" runat="server" Height="119px" 
+                ImageUrl="~/Images/download (2)2.jpg" Width="111px" 
+                onclick="ImageButton5_Click" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:ImageButton ID="ImageButton6" runat="server" Height="112px" 
+           ImageUrl="~/Images/17259427-Orange-cartoon-character-with-red-button-quot-logout-quot--Stock-Photo.jpg" 
+                Width="148px"  onclick="ImageButton6_Click" /> 
+               </tr>
+        <tr><td align="right" bgcolor="#FFFF66">
+        
+            <asp:Label ID="Label1" runat="server" Font-Names="Arial" ForeColor="#009933"></asp:Label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:LinkButton ID="LinkButton1" runat="server" ForeColor="#CC3300" 
+                onclick="LinkButton1_Click" Visible="False">Log Out</asp:LinkButton>
+         <nav align="right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           <ul class="nav">
+                <li><a href="#">UPDATE details</a>
+                    <ul>
+                        <li><a href="ad_book.aspx">Booking Details</a></li>
+                        <li><a href="au_job.aspx">Job Card Details</a></li>
+                        <li><a href="ad_personal.aspx">Customer Details</a></li>
+                        <li><a href="au_product.aspx">Product Details</a></li>
+                   </ul> 
+                </li>
+        </nav>
+        </td></tr>
+        </table>
+        
+         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

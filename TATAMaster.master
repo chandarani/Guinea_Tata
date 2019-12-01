@@ -1,0 +1,260 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="TATAMaster.master.cs" Inherits="TATAMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Guinea Motors</title>
+    <link href = "Style/menu.css" rel="Stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+    <style type="text/css">
+        .style1
+        {
+            font-family: Arial;
+            font-size: 18px;
+            width: 1328px;
+        }
+        .style2
+        {
+            width: 325px;
+        }
+
+
+  
+        .style3
+        {
+            width: 107%;
+            height: 91px;
+        }
+        .style5
+        {
+            width: 114%;
+            height: 5px;
+        }
+        .style6
+        {
+            width: 103%;
+        }
+        .style7
+        {
+            width: 104%;
+        }
+        .style8
+        {
+            width: 244px;
+        }
+        
+        .menu{
+border:none;
+border:0px;
+margin:0px;
+padding:0px;
+font: 67.5% "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
+font-size:18px;
+font-weight:bold;
+width:100%;
+}
+.menu ul{
+background:#5A5A5A;
+height:50px;
+list-style:none;
+margin:0;
+padding:0;
+-webkit-border-radius: 17px;
+-moz-border-radius: 17px;
+border-radius: 17px;
+-webkit-box-shadow: inset 0px 16px 0px 0px rgba(255, 255, 255, .1);
+-moz-box-shadow: inset 0px 16px 0px 0px rgba(255, 255, 255, .1);
+box-shadow: inset 0px 16px 0px 0px rgba(255, 255, 255, .1);
+}
+.menu li{
+float:left;
+padding:0px 0px 0px 15px;
+}
+.menu li a{
+color:#FFFFFF;
+display:block;
+font-weight:normal;
+line-height:50px;
+margin:0px;
+padding:0px 25px;
+text-align:center;
+text-decoration:none;
+}
+.menu li a:hover{
+background:#D2D2D2;
+color:#000000;
+text-decoration:none;
+-webkit-box-shadow: inset 0px 0px 7px 2px rgba(0, 0, 0, .3);
+-moz-box-shadow: inset 0px 0px 7px 2px rgba(0, 0, 0, .3);
+box-shadow: inset 0px 0px 7px 2px rgba(0, 0, 0, .3);
+}
+.menu ul li:hover a{
+background:#D2D2D2;
+color:#000000;
+text-decoration:none;
+}
+.menu li ul{
+display:none;
+height:auto;
+padding:0px;
+margin:0px;
+border:0px;
+position:absolute;
+width:200px;
+z-index:200;
+}
+.menu li:hover ul{
+display:block; 
+}
+.menu li li {
+display:block;
+float:none;
+margin:0px;
+padding:0px;
+width:200px;
+background:#B4B4B4;
+/*this is where the rounded corners for the dropdown disappears*/
+}
+.menu li:hover li a{
+background:none;
+}
+.menu li ul a
+{
+ font-weight:bold;   
+display:block;
+height:50px;
+font-size:14px;
+font:Lucida Sans Unicode;
+margin:0px;
+padding:0px 10px 0px 15px;
+text-align:left;
+}
+.menu li ul a:hover, .menu li ul li:hover a{
+border:0px;
+color:#FFFFFF;
+text-decoration:none;
+background:#5A5A5A;
+-webkit-box-shadow: inset 0px 0px 7px 2px rgba(0, 0, .2, .3);
+-moz-box-shadow: inset 0px 0px 7px 2px rgba(0, 0, 0, .3);
+box-shadow: inset 0px 0px 7px 2px rgba(0, 0, .1, .3); 
+}
+    </style>
+
+        
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+        <table align="center"  width="100%">
+
+        <tr>
+        <td >
+            <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/images (50).jpg" />
+        </td>
+        <td >
+            <asp:Image ID="Image2" runat="server" ImageUrl="~/Images/images (8).png" 
+                Height="143px" Width="1089px" />
+        </td>
+  
+        </tr>
+        </table>
+        
+        <div  class="menu">
+
+
+<ul>
+	 <li><a href="home.aspx">Home</a></li>
+    <li><a href="aboutus.aspx">About Us</a>
+      <ul>
+        <li><a href="history.aspx">History</a></li>
+        <li><a target="_blank" href="Images/mission.pdf">Mission</a></li>
+     </ul>
+    </li>
+    <li><a href="#">Car Service</a>
+      <ul>
+        <li><a href="#">Passenger Vehicles</a></li>
+        <li><a href="booking.aspx">Online Booking</a></li>
+     </ul>
+    </li>
+    <li><a href="booking.aspx">Service Booking</a></li>
+    <li><a href="#">Status</a>
+      <ul>
+        <li><a href="login.aspx">Login</a></li>
+      </ul>
+    </li>
+    <li><a href="contact.aspx">Contact</a></li>
+  </ul>
+<p></p>
+   </div> 
+         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+        <div id="id2">
+        <table cellpadding="2" cellspacing="5" 
+                style="font-family: 'Comic Sans MS'; font-style: normal; color: #FFFFFF" 
+                class="style7">
+        <tr>
+        <td bgcolor="Gray" class="style8">
+            <asp:Image ID="Image4" runat="server" ImageUrl="~/Images/download.jpg" 
+                Height="99px" Width="255px" /> 
+        </td>
+        <td bgcolor="Gray">TATA Automobile Solutions Limited</td>
+        <td bgcolor="Gray">Email Us </br>enquiry@tata.in</td>
+        <td bgcolor="Gray">Toll free </br><a href="#">1800 425 2002</a></td>
+        <td bgcolor="Gray">Like/Follow <br />Facebook/Twitter/Linkedin</td>
+        </tr>
+        </table>
+        </div>
+
+        <div id="id1">
+        <table width="90%" align="center"  cellpadding="0" cellspacing="0">
+        <tr>
+        <td align="center">
+        <a href="home.aspx">HOME</a>
+        </td>
+
+        <td align="center" class="myclass">
+        <a href="aboutus.aspx">ABOUT US</a>
+        </td>
+        
+        <td align="center" class="myclass">
+        <a href="#">SERVICE</a>
+        </td>
+        
+        <td align="center" class="myclass">
+        <a href="#">OFFERS</a>
+        </td>
+        
+        <td align="center" class="myclass">
+        <a href="#">STATUS</a>
+        </td>
+        
+        <td align="center" class="myclass">
+        <a href="gallery.aspx">GALLERY</a>
+        </td>
+        
+        <td align="center" class="myclass">
+        <a href="contact.aspx">LOCATE US</a>
+        </td>
+        
+        </tr>
+        </table>
+        </div>
+        
+        <div ><table align="center" cellspacing="10" cellpadding="6" >
+        <tr>
+        <td class="style1" align="left">Copyright2016 TATA Automobile Solutions Limited.All rights reserved.</td>
+        <td class="style2" align="right"> Website design and developed by<br />GROUP MOON</td>
+        </tr>
+        </table>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
